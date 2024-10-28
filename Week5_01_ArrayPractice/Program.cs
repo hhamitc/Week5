@@ -14,16 +14,16 @@
 
         foreach (int i in tamSayilar)//Diziyi konsola yazdırdım.
         {
-            Console.WriteLine(i);
+            Console.Write(i + " ");
         }
 
-        Console.WriteLine("------------------------------");//Görüntüyü ayırmak için çizgi satırı ekledim.
+        Console.WriteLine("\n------------------------------");//Görüntüyü ayırmak için çizgi satırı ekledim.
 
 
         Array.Resize(ref tamSayilar, tamSayilar.Length + 1);// Dizinin boyutunu bir adet artırdım.
 
 
-        Console.Write("Dizinin 11.Değerini giriniz: "); //Dizinin 11.Değerini kullanıcıdan istedim.
+        Console.Write("Dizinin 11. elemanını giriniz: "); //Dizinin 11.Değerini kullanıcıdan istedim.
         tamSayilar[10] = int.Parse(Console.ReadLine());
 
 
@@ -33,7 +33,7 @@
 
         foreach (var i in tamSayilar)
         {
-            Console.WriteLine(i);
+            Console.Write(i + " ");
         }
 
 
