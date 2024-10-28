@@ -22,7 +22,9 @@
 
         Array.Resize(ref tamSayilar, tamSayilar.Length + 1);// Dizinin boyutunu bir adet artırdım.
 
-        tamSayilar[10] = 2; //Dizinin son elemanını manuel olarak oluiturdum.
+
+        Console.Write("Dizinin 11.Değerini giriniz: "); //Dizinin 11.Değerini kullanıcıdan istedim.
+        tamSayilar[10] = int.Parse(Console.ReadLine());
 
 
         //Diziyi büyükten küçüğe yazdırmak için sort ve reverse metotlarını kullandım ve foreach ile yeniden yazdırdım.
