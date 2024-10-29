@@ -31,16 +31,6 @@
             Console.WriteLine(kahve);
         }
 
-
-
-
-
-
-
-
-
-
-
         Console.ReadKey();
     }
 }
