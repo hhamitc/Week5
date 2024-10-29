@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week5_01_ArrayPractice", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week5_02_ListsPractice", "Week5_02_ListsPractice\Week5_02_ListsPractice.csproj", "{A1C64774-F9BF-4D26-A5D0-F2ADA65EA1F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week5_03_ListsPractice2", "Week5_03_ListsPractice2\Week5_03_ListsPractice2.csproj", "{D827BEE8-1E1F-4587-A1A9-AEB3A1C27A00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A1C64774-F9BF-4D26-A5D0-F2ADA65EA1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C64774-F9BF-4D26-A5D0-F2ADA65EA1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C64774-F9BF-4D26-A5D0-F2ADA65EA1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D827BEE8-1E1F-4587-A1A9-AEB3A1C27A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D827BEE8-1E1F-4587-A1A9-AEB3A1C27A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D827BEE8-1E1F-4587-A1A9-AEB3A1C27A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D827BEE8-1E1F-4587-A1A9-AEB3A1C27A00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
