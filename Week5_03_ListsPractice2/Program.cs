@@ -9,18 +9,16 @@
         Console.WriteLine("5 Adet Kahve İsmi Girinin: ");
 
         //Kahve isimlerini for döngüsü içinde kullanıcıdan alma.
-        int kahveSayac = 1;
-        for (int i = 0; i < 5; i++)
+        for (int i = 1; i <= 5; i++)
         {
 
             Console.ForegroundColor = ConsoleColor.Red; //Görselde istendiği şekilde consoldaki renk ayarı
-            Console.Write($"Kahve {kahveSayac}: ");
+            Console.Write($"Kahve {i}: ");
 
             Console.ForegroundColor = ConsoleColor.DarkGreen; //Görselde istendiği şekilde consoldaki renk ayarı
             string kahve = Console.ReadLine();
 
             kahveler.Add(kahve);
-            kahveSayac++;
         }
 
         //Çıktı rengini ayarlayıp listeyi konsola yazdırma.
