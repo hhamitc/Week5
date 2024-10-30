@@ -80,7 +80,7 @@ public class Program
     static void DisplayCarList(List<Cars> CarList) // Listeyi burada parametre olarak alın
     {
         Console.WriteLine("-------- Araba Listesi --------");
-        foreach (var car in CarList)
+        foreach (Cars car in CarList)
         {
             Console.WriteLine($"Seri Numarası: {car.SerialNumber}, Marka: {car.Brand}, Model: {car.Model}, Renk: {car.Color}, Kapı Sayısı: {car.DoorCount}");
         }

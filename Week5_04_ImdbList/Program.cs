@@ -5,7 +5,7 @@ public class Program
     public static void Main(string[] args)
     {
         // Film listesini tutmak için bir liste oluşturuluyor
-        List<Movie> MovieList = new List<Movie>();
+        List<Movie> movieList = new List<Movie>();
 
         while (true)
         {
@@ -27,7 +27,7 @@ public class Program
 
             // Yeni bir film nesnesi oluştur ve listeye ekle
             Movie movie = new Movie(name, rating);
-            MovieList.Add(movie);
+            movieList.Add(movie);
 
             Console.WriteLine("Başarıyla Eklendi.");
             Console.WriteLine("-----------------------------------");
@@ -51,52 +51,54 @@ public class Program
             {
                 // Ekranı temizle ve listeleri göster
                 Console.Clear();
-                DisplayFullList();
+                DisplayFullList(movieList);
                 Console.WriteLine("-------------------");
-                DisplayListInRangeOf(4, 9);
+                DisplayListInRangeOf(4, 9, movieList);
                 Console.WriteLine("-------------------");
-                DisplayListStartsBy("A");
+                DisplayListStartsBy("A", movieList);
                 Console.ReadKey();
                 return;
             }
         }
 
-        // Tüm film listesini ekrana yazdırır
-        void DisplayFullList()
+        Console.ReadKey();
+    }
+
+    // Tüm film listesini ekrana yazdırır
+    public static void DisplayFullList(List<Movie> MovieList)
+    {
+        Console.WriteLine("----- Filmler Tam Liste -----");
+        foreach (var movie in MovieList)
         {
-            Console.WriteLine("----- Filmler Tam Liste -----");
-            foreach (var movie in MovieList)
+            Console.WriteLine($"Film Adı: {movie.Name}, IMDB Puanı: {movie.Rating}");
+        }
+    }
+
+    // Belirtilen puan aralığındaki filmleri ekrana yazdırır
+    public static void DisplayListInRangeOf(double floorRating, double cealingRating, List<Movie> MovieList)
+    {
+        Console.WriteLine($"----- Puanı {floorRating} - {cealingRating} Arasındaki Filmler  -----");
+        foreach (Movie movie in MovieList)
+        {
+            if (movie.Rating >= floorRating && movie.Rating <= cealingRating)
             {
                 Console.WriteLine($"Film Adı: {movie.Name}, IMDB Puanı: {movie.Rating}");
             }
         }
-
-        // Belirtilen puan aralığındaki filmleri ekrana yazdırır
-        void DisplayListInRangeOf(double floorRating, double cealingRating)
-        {
-            Console.WriteLine($"----- Puanı {floorRating} - {cealingRating} Arasındaki Filmler  -----");
-            foreach (var movie in MovieList)
-            {
-                if (movie.Rating >= floorRating && movie.Rating <= cealingRating)
-                {
-                    Console.WriteLine($"Film Adı: {movie.Name}, IMDB Puanı: {movie.Rating}");
-                }
-            }
-        }
-
-        // Belirtilen harf ile başlayan filmleri ekrana yazdırır
-        void DisplayListStartsBy(string letter)
-        {
-            Console.WriteLine($"----- İsmi {letter} ile başlayan Filmler  -----");
-            foreach (var movie in MovieList)
-            {
-                if (movie.Name.StartsWith(letter.ToLower()) || movie.Name.StartsWith(letter.ToUpper()))
-                {
-                    Console.WriteLine($"Film Adı: {movie.Name}, IMDB Puanı: {movie.Rating}");
-                }
-            }
-        }
-
-        Console.ReadKey();
     }
+
+    // Belirtilen harf ile başlayan filmleri ekrana yazdırır
+    public static void DisplayListStartsBy(string letter, List<Movie> MovieList)
+    {
+        Console.WriteLine($"----- İsmi {letter} ile başlayan Filmler  -----");
+        foreach (var movie in MovieList)
+        {
+            if (movie.Name.StartsWith(letter.ToLower()) || movie.Name.StartsWith(letter.ToUpper()))
+            {
+                Console.WriteLine($"Film Adı: {movie.Name}, IMDB Puanı: {movie.Rating}");
+            }
+        }
+    }
+
+
 }
